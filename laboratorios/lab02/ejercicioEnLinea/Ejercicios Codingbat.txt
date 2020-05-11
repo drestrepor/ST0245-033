@@ -1,0 +1,428 @@
+//CountEvens
+
+public int countEvens(int[] nums) {
+  int cont = 0;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 == 0)
+      cont++;
+  }
+  return cont;
+}
+
+
+//BigDiff
+
+public int bigDiff(int[] nums) {
+  int min = nums[0];
+  int max = nums[0];
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+    if (nums[i] < min) {
+      min = nums[i];
+    }
+  }
+  return max - min;
+}
+
+
+//CenteredAverege
+
+public int centeredAverage(int[] nums) {
+  int[] arr = new int[nums.length];
+  int max = nums[0];
+  int min = nums[0];
+  boolean menor = false;
+  boolean mayor = false;
+  int suma = 0;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+    if (nums[i] < min) {
+      min = nums[i];
+    }
+  }
+  for (int i = 0; i < nums.length; i++) {
+    if ((nums[i] == min) && (!(menor))) {
+      arr[i] = 0;
+      menor = true;
+    }else
+    if ((nums[i] == max) && (!(mayor))) {
+      arr[i] = 0;
+      mayor = true;
+    } else
+    arr[i] = nums[i];
+  }
+  for (int i = 0; i < arr.length; i++) {
+    suma = suma + arr[i];
+  }
+  return suma / (nums.length -2);
+}
+
+
+
+//Sum13
+
+public int sum13(int[] nums) {
+  int suma = 0;
+  if (nums.length == 0) {
+    return 0;
+  }
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] == 13) {
+      i+= 1;
+    }
+    else {
+    suma = suma + nums[i];
+    }
+  }
+  return suma;
+}
+
+
+//Sum67
+
+public int sum67(int[] nums) {
+  boolean non = false;
+  int suma = 0;
+  for (int i = 0; i < nums.length; i++) {
+    if ((nums[i] == 6) && !(non)) {
+      non = true;
+    }
+    else if (((nums[i] == 7) && (non))) {
+      non = false;
+    }
+    else if (!non){
+      suma = suma + nums[i];
+    }
+  }
+  return suma;
+}
+
+
+//Has22
+
+public boolean has22(int[] nums) {
+  boolean two = false;
+  for (int i = 0; i < nums.length - 1; i++) {
+    if ((nums[i] == 2) && (nums[i+1] == 2)) {
+      two = true;
+    }
+  }
+  return two;
+}
+
+
+
+//Lucky13
+
+public boolean lucky13(int[] nums) {
+  boolean verd = true;
+  for (int i = 0; i < nums.length; i++) {
+    if ((nums[i] == 1) || (nums[i] == 3)) {
+      verd = false;
+    }
+  }
+  return verd;
+}
+
+
+//Sum28
+
+public boolean sum28(int[] nums) {
+  int suma = 0;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] == 2) {
+      suma = suma + 2;
+    }
+  }
+  if (suma == 8) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+//More14
+
+public boolean more14(int[] nums) {
+  int cont1 = 0;
+  int cont4 = 0;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] == 1) {
+      cont1++;
+    }
+    if (nums[i] == 4) {
+      cont4++;
+    }
+  }
+  if (cont1 > cont4) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+
+//FizzArray
+
+public int[] fizzArray(int n) {
+  int[] nums = new int[n];
+  for (int i = 0; i < n; i++) {
+    nums[i] = i;
+  }
+  return nums;
+}
+
+
+//Only14
+
+public boolean only14(int[] nums) {
+  boolean uno = true;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] != 1 && nums[i] !=4) {
+      uno = false;
+    }
+  }
+  return uno;
+}
+
+
+
+//FizzArray2
+
+public String[] fizzArray2(int n) {
+  String[] nums = new String[n];
+  for (int i = 0; i < nums.length; i++) {
+    nums[i] = Integer.toString(i);
+  }
+  return nums;
+}
+
+
+
+//No14
+
+public boolean no14(int[] nums) {
+  boolean one = false;
+  boolean four = false;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] == 1) {
+      one = true;
+    }
+    if (nums[i] == 4) {
+      four = true;
+    }
+  }
+  if (four && one) {
+    return false;
+  }else 
+  {
+    return true;
+  }
+}
+
+
+
+//IsEveryWhere
+
+public boolean isEverywhere(int[] nums, int val) {
+  boolean esta = true;
+  for (int i = 0; i < nums.length - 1; i++) {
+    if (nums[i] != val && nums[i + 1] != val) {
+      esta = false;
+    }
+  }
+  return esta;
+}
+
+
+
+
+//Either24
+
+public boolean either24(int[] nums) {
+  boolean dos = false;
+  boolean cuatro = false;
+  for (int i = 0; i < nums.length - 1; i++) {
+    if (nums[i] == 2 && nums[i+1] == 2) {
+      dos = true;
+    }
+    if (nums[i] == 4 && nums [i+1] == 4) {
+      cuatro = true;
+    }
+  }
+  if (dos && cuatro) {
+    return false;
+  }else 
+  if (dos || cuatro){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+
+//MatchUp
+
+public int matchUp(int[] nums1, int[] nums2) {
+  int cont = 0;
+  for (int i = 0; i < nums1.length; i++) {
+    if (nums1[i] != nums2[i] && Math.abs(nums2[i]-nums1[i]) <= 2) {
+      cont ++;
+    }
+  }
+  return cont;
+}
+
+
+
+//Has77
+
+public boolean has77(int[] nums) {
+  boolean seven = false;
+  for (int i = 0; i < nums.length-2; i ++) {
+    if ((((nums[i] == 7 && nums[i+1] == 7)) || (nums[i] == 7 && nums[i+2] == 7)) || nums[i+1] == 7 && nums[i+2] == 7) {
+      seven = true;
+    }
+  }
+  return seven;
+}
+
+
+
+//Has12
+
+public boolean has12(int[] nums) {
+  boolean uno = false;
+  boolean dos = false;
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] == 1) {
+      uno = true;
+    }
+    if (nums[i] == 2 && uno) {
+      dos = true;
+    }
+  }
+  return (uno && dos);
+}
+
+
+
+//MaxSpan
+
+public int maxSpan(int[] nums) {
+  int pos = 0;
+  int max = 0;
+  if (nums.length == 0) {
+    return 0;
+  }
+  for (int i = 0; i < nums.length; i++) {
+    for (int j = 0; j < nums.length; j++) {
+      if (nums[i] == nums[j])
+        pos = j - i;
+    }
+    if (max < pos)
+      max = pos;
+  }
+  return max+1;
+}
+
+
+
+//Fix34
+
+public int[] fix34(int[] nums) {
+  int cont = 0;
+  int[] arr = new int[nums.length];
+  for (int i = 0; i < nums.length; i++) {
+    if (nums[i] = 3){
+      cont++;
+    }
+  }
+  return cont;
+}
+
+
+
+//LinearIn
+
+public boolean linearIn(int[] outer, int[] inner) {
+  int i = 0;
+  int j = 0;
+  while(i < inner.length && j < outer.length) {
+    if (inner[i] == outer[j]) {
+      i++;
+      j++;
+    }else {
+      j++;
+    }
+  }
+  return (i==inner.length);
+}
+
+
+
+//SquareUp
+
+public int[] squareUp(int n) {
+  int k = n*n;
+  int[][] temp = new int[n][n];
+  int[] square = new int[k];
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n-i; j++) {
+      temp[i][j] = j+1;
+    }
+  }
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++,k--) {
+      square[k-1] = temp[i][j];
+    }
+  }
+  return square;
+}
+
+
+
+//SeriesUp
+
+public int[] seriesUp(int n) {
+  int[][] temp = new int[n][n];
+  int[]serie = new int[(n*(n+1))/2];
+  int m = 0;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j <= i; j++) {
+      temp[i][j] = j+1;
+    }
+  }
+  
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j <= i; j++, m++) {
+      serie[m] = temp[i][j];
+    }
+  }
+  return serie;
+}
+
+
+
+//CountClumps
+
+public int countClumps(int[] nums) {
+  int cont = 0;
+  for (int i = 1; i < nums.length; i++) {
+    if ((nums[i-1] == nums[i]) && (nums[i] == nums[i+1])) {
+      cont++;
+      i++;
+    }
+  }
+  return cont;
+}
