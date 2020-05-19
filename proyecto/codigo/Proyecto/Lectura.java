@@ -22,10 +22,10 @@ public class Lectura {
         long inicio = System.currentTimeMillis();
 
         leer_archivo(seleccionarDataset());
-        int label[] = llenarLabel();
+        int exito[] = llenarexito();
         double matriz[][] = recolectarDatos();
 
-        Node raizDelArbol = new Node(matriz, label);
+        Node raizDelArbol = new Node(matriz, exito);
         Tree tree = new Tree(raizDelArbol);
 
         System.out.println("Aquí está la raiz " + tree.toString());
@@ -186,34 +186,34 @@ public class Lectura {
 
     /**
      * This method fills a matrix with
-     * the labels processed by the program.
-     * @return matrix with labels.
+     * the exitos processed by the program.
+     * @return matrix with exitos.
      */
-    public static int[] llenarLabel() {
+    public static int[] llenarexito() {
         long inicio_llenar = System.currentTimeMillis();
 
-        int label5 [];
+        int exito5 [];
         int filas = datos.size();
-        label5 = new int [filas];
+        exito5 = new int [filas];
         for (int i = 0; i < filas ; i++) {
             if (String.valueOf(datos.get(i).getExito()).compareToIgnoreCase("yes") == 0) {
-                label5[i] = 1;
+                exito5[i] = 1;
             } else {
-                label5[i]=0;
+                exito5[i]=0;
 
             }
         }
         //Metodo para imprimir la matriz, puede borrarse si no necesita ser imprimida
 
-        /*for (int a: label5
+        /*for (int a: exito5
          ) {
          System.out.println(a);
          }*/
 
         long fin_llenar = System.currentTimeMillis();
         long total_llenar = fin_llenar - inicio_llenar;
-        System.out.println("Tiempo de ejecución para llenarLabel(): " + total_llenar + "ms");
+        System.out.println("Tiempo de ejecución para llenarexito(): " + total_llenar + "ms");
 
-        return label5;
+        return exito5;
     }
 }

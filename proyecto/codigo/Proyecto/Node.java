@@ -12,7 +12,7 @@ public class Node {
     public double variable;
     public double matriz[][];
     public double impurezas[][];
-    public int label[];
+    public int exito[];
     public double impureza;
     public Node izq;
     public Node der;
@@ -22,12 +22,12 @@ public class Node {
      * @param matrizDeDatos matrix with the data
      *                      created for accessing
      *                      easily to the data.
-     * @param label label matrix.
+     * @param exito exito matrix.
      */
-    public Node(double [][] matrizDeDatos, int [] label) {
+    public Node(double [][] matrizDeDatos, int [] exito) {
         matriz = matrizDeDatos;
-        impurezas = llenarImpureza(matriz,label);
-        this.label = label;
+        impurezas = llenarImpureza(matriz,exito);
+        this.exito = exito;
         int columnas = matrizDeDatos[0].length;
         if (columnas > 1) {
             impureza = variableConMenorImpureza(impurezas);
@@ -37,12 +37,12 @@ public class Node {
             //LinkedList<Integer> indiM = indicesMayores(matriz, (int) algo, variable);
             double[][] matrizDer = menores(matriz, (int) algo, variable);
             //LinkedList<Integer> indimenor = indicesMenores(matriz, (int) algo, variable);
-            //int [] labelIzq = labelMenor(label,indimenor);
-            //int [] labelDer = labelMayor(label,indiM);
+            //int [] exitoIzq = exitoMenor(exito,indimenor);
+            //int [] exitoDer = exitoMayor(exito,indiM);
             if (matrizIzq.length > 0)
-                izq = new Node(matrizIzq, label );
+                izq = new Node(matrizIzq, exito );
             if (matrizDer.length > 0)
-                der = new Node(matrizDer,label);
+                der = new Node(matrizDer,exito);
         }
     }
 
@@ -174,7 +174,7 @@ public class Node {
      * This method calculates the gini impurity
      * @param matriz
      */
-    public static double[][] llenarImpureza(double [][] matriz, int [] label) {
+    public static double[][] llenarImpureza(double [][] matriz, int [] exito) {
         long inicio_llenar = System.currentTimeMillis();
 
         //Metodo para llenar la matriz
@@ -196,17 +196,17 @@ public class Node {
 
                 for (int k = 0; k < matriz.length ; k++) {
                     if (matriz[k][i] <= variableParte) {
-                        if (label[k]==1){
+                        if (exito[k]==1){
                             royaI++;
-                        }else if(label[k]==0){
+                        }else if(exito[k]==0){
                             noRoyaI++;
                         }
                         menores++;
                         izquierda.add(matriz[k][i]);
                     } else {
-                        if (label[k]==1){
+                        if (exito[k]==1){
                             royaD++;
-                        }else if(label[k]==0){
+                        }else if(exito[k]==0){
                             noRoyaD++;
                         }
                         mayores++;
