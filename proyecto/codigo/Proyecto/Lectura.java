@@ -93,7 +93,7 @@ public class Lectura {
                         Double.parseDouble(str[58]), Double.parseDouble(str[59]), Double.parseDouble(str[60]), Double.parseDouble(str[61]), Double.parseDouble(str[62]), Double.parseDouble(str[63]),
                         Double.parseDouble(str[64]), Double.parseDouble(str[65]), Double.parseDouble(str[66]), Double.parseDouble(str[67]), Double.parseDouble(str[68]), Double.parseDouble(str[69]),
                         Double.parseDouble(str[70]), Double.parseDouble(str[71]), Double.parseDouble(str[72]), Double.parseDouble(str[73]), Double.parseDouble(str[74]), Double.parseDouble(str[75]),
-                        Double.parseDouble(str[76])));
+                        Double.parseDouble(str[76]) , Double.parseDouble(str[77])));
                 for (String s : str) {
                     System.out.print(s + "\t\t\t  ");
                     writer.print(s + " \t\t\t ");

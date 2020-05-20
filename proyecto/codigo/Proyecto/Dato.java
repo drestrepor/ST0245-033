@@ -1,6 +1,6 @@
 public class Dato {
 
-    double estu_consecutivo.1;
+    double estu_consecutivo1;
     double estu_exterior;
     double periodo;
     double estu_tieneetnia;
@@ -15,35 +15,35 @@ public class Dato {
     double fami_trabajolabormadre;
     double fami_numlibros;
     double estu_inst_cod_departamento;
-    double estu_tipodocumento.1;
-    double estu_nacionalidad.1;
-    double estu_genero.1;
-    double estu_fechanacimiento.1;
-    double periodo.1;
-    double estu_estudiante.1;
-    double estu_pais_reside.1;
-    double estu_depto_reside.1;
-    double estu_cod_reside_depto.1;
-    double estu_mcpio_reside.1;
-    double estu_cod_reside_mcpio.1;
+    double estu_tipodocumento1;
+    double estu_nacionalidad1;
+    double estu_genero1;
+    double estu_fechanacimiento1;
+    double periodo1;
+    double estu_estudiante1;
+    double estu_pais_reside1;
+    double estu_depto_reside1;
+    double estu_cod_reside_depto1;
+    double estu_mcpio_reside1;
+    double estu_cod_reside_mcpio1;
     double estu_areareside;
     double estu_valorpensioncolegio;
-    double fami_educacionpadre.1;
-    double fami_educacionmadre.1;
-    double fami_ocupacionpadre.1;
-    double fami_ocupacionmadre.1;
-    double fami_estratovivienda.1;
+    double fami_educacionpadre1;
+    double fami_educacionmadre1;
+    double fami_ocupacionpadre1;
+    double fami_ocupacionmadre1;
+    double fami_estratovivienda1;
     double fami_nivelsisben;
     double fami_pisoshogar;
-    double fami_tieneinternet.1;
-    double fami_tienecomputador.1;
+    double fami_tieneinternet1;
+    double fami_tienecomputador1;
     double fami_tienemicroondas;
     double fami_tienehorno;
-    double fami_tieneautomovil.1;
+    double fami_tieneautomovil1;
     double fami_tienedvd;
-    double fami_tiene_nevera.1;
-    double fami_tiene_celular.1;
-    double fami_telefono.1;
+    double fami_tiene_nevera1;
+    double fami_tiene_celular1;
+    double fami_telefono1;
     double fami_ingresofmiliarmensual;
     double estu_trabajaactualmente;
     double estu_antecedentes;
@@ -82,7 +82,7 @@ public class Dato {
 
     /**
      * This is the constructor for Dato.
-     * @param  estu_consecutivo.1;
+     * @param  estu_consecutivo1;
      @param  estu_exterior;
      @param  periodo;
      @param  estu_tieneetnia;
@@ -97,35 +97,35 @@ public class Dato {
      @param  fami_trabajolabormadre;
      @param  fami_numlibros;
      @param  estu_inst_cod_departamento;
-     @param  estu_tipodocumento.1;
-     @param  estu_nacionalidad.1;
-     @param  estu_genero.1;
-     @param  estu_fechanacimiento.1;
-     @param  periodo.1;
-     @param  estu_estudiante.1;
-     @param  estu_pais_reside.1;
-     @param  estu_depto_reside.1;
-     @param  estu_cod_reside_depto.1;
-     @param  estu_mcpio_reside.1;
-     @param  estu_cod_reside_mcpio.1;
+     @param  estu_tipodocumento1;
+     @param  estu_nacionalidad1;
+     @param  estu_genero1;
+     @param  estu_fechanacimiento1;
+     @param  periodo1;
+     @param  estu_estudiante1;
+     @param  estu_pais_reside1;
+     @param  estu_depto_reside1;
+     @param  estu_cod_reside_depto1;
+     @param  estu_mcpio_reside1;
+     @param  estu_cod_reside_mcpio1;
      @param  estu_areareside;
      @param  estu_valorpensioncolegio;
-     @param  fami_educacionpadre.1;
-     @param  fami_educacionmadre.1;
-     @param  fami_ocupacionpadre.1;
-     @param  fami_ocupacionmadre.1;
-     @param  fami_estratovivienda.1;
+     @param  fami_educacionpadre1;
+     @param  fami_educacionmadre1;
+     @param  fami_ocupacionpadre1;
+     @param  fami_ocupacionmadre1;
+     @param  fami_estratovivienda1;
      @param  fami_nivelsisben;
      @param  fami_pisoshogar;
-     @param  fami_tieneinternet.1;
-     @param  fami_tienecomputador.1;
+     @param  fami_tieneinternet1;
+     @param  fami_tienecomputador1;
      @param  fami_tienemicroondas;
      @param  fami_tienehorno;
-     @param  fami_tieneautomovil.1;
+     @param  fami_tieneautomovil1;
      @param  fami_tienedvd;
-     @param  fami_tiene_nevera.1;
-     @param  fami_tiene_celular.1;
-     @param  fami_telefono.1;
+     @param  fami_tiene_nevera1;
+     @param  fami_tiene_celular1;
+     @param  fami_telefono1;
      @param  fami_ingresofmiliarmensual;
      @param  estu_trabajaactualmente;
      @param  estu_antecedentes;
@@ -162,18 +162,18 @@ public class Dato {
      @param  exito;
 
      */
-    public Dato(double estu_consecutivo.1,  double estu_exterior,   double periodo, double estu_tieneetnia, double estu_tomo_cursopreparacion,  double estu_cursodocentesies,   double estu_cursoiesapoyoexterno,
+    public Dato(double estu_consecutivo1,  double estu_exterior,   double periodo, double estu_tieneetnia, double estu_tomo_cursopreparacion,  double estu_cursodocentesies,   double estu_cursoiesapoyoexterno,
                 double estu_cursoiesexterna,    double estu_simulacrotipoicfes, double estu_actividadrefuerzoareas, double estu_actividadrefuerzogeneric,   double fami_trabajolaborpadre,  double fami_trabajolabormadre,
-                double fami_numlibros,  double estu_inst_cod_departamento,  double estu_tipodocumento.1,    double estu_nacionalidad.1, double estu_genero.1,   double estu_fechanacimiento.1,  double periodo.1,
-                double estu_estudiante.1,   double estu_pais_reside.1,  double estu_depto_reside.1, double estu_cod_reside_depto.1, double estu_mcpio_reside.1, double estu_cod_reside_mcpio.1, double estu_areareside,
-                double estu_valorpensioncolegio,    double fami_educacionpadre.1,   double fami_educacionmadre.1,   double fami_ocupacionpadre.1,   double fami_ocupacionmadre.1,   double fami_estratovivienda.1,
-                double fami_nivelsisben,    double fami_pisoshogar, double fami_tieneinternet.1,    double fami_tienecomputador.1,  double fami_tienemicroondas,    double fami_tienehorno, double fami_tieneautomovil.1,
-                double fami_tienedvd,   double fami_tiene_nevera.1, double fami_tiene_celular.1,    double fami_telefono.1, double fami_ingresofmiliarmensual,  double estu_trabajaactualmente, double estu_antecedentes,
+                double fami_numlibros,  double estu_inst_cod_departamento,  double estu_tipodocumento1,    double estu_nacionalidad1, double estu_genero1,   double estu_fechanacimiento1,  double periodo1,
+                double estu_estudiante1,   double estu_pais_reside1,  double estu_depto_reside1, double estu_cod_reside_depto1, double estu_mcpio_reside1, double estu_cod_reside_mcpio1, double estu_areareside,
+                double estu_valorpensioncolegio,    double fami_educacionpadre1,   double fami_educacionmadre1,   double fami_ocupacionpadre1,   double fami_ocupacionmadre1,   double fami_estratovivienda1,
+                double fami_nivelsisben,    double fami_pisoshogar, double fami_tieneinternet1,    double fami_tienecomputador1,  double fami_tienemicroondas,    double fami_tienehorno, double fami_tieneautomovil1,
+                double fami_tienedvd,   double fami_tiene_nevera1, double fami_tiene_celular1,    double fami_telefono1, double fami_ingresofmiliarmensual,  double estu_trabajaactualmente, double estu_antecedentes,
                 double estu_expectativas,   double cole_codigo_icfes,   double cole_cod_dane_establecimiento,   double cole_nombre_establecimiento, double cole_genero, double cole_naturaleza, double cole_calendario,
                 double cole_bilingue,   double cole_caracter,   double cole_cod_dane_sede,  double cole_nombre_sede,  double cole_sede_principal, double cole_area_ubicacion, double cole_jornada,    double cole_cod_mcpio_ubicacion,
                 double cole_mcpio_ubicacion,    double cole_cod_depto_ubicacion,    double cole_depto_ubicacion,    double punt_lenguaje,   double punt_matematicas,  double punt_biologia,   double punt_quimica,    double punt_fisica,  double punt_ciencias_sociales,
                 double punt_filosofia,   double punt_ingles,  double desemp_ingles,    double profundiza,   double puntaje_prof,     double desemp_prof,  double exito) {
-        this.estu_consecutivo.1 =  ;
+        this.estu_consecutivo1 = estu_consecutivo1 ;
         this.estu_exterior = estu_exterior ;
         this.periodo = periodo ;
         this.estu_tieneetnia = estu_tieneetnia ;
@@ -188,35 +188,35 @@ public class Dato {
         this.fami_trabajolabormadre = fami_trabajolabormadre ;
         this.fami_numlibros = fami_numlibros ;
         this.estu_inst_cod_departamento = estu_inst_cod_departamento  ;
-        this.estu_tipodocumento.1 = estu_tipodocumento.1 ;
-        this.estu_nacionalidad.1 = estu_nacionalidad.1  ;
-        this.estu_genero.1 = estu_genero.1  ;
-        this.estu_fechanacimiento.1 = estu_fechanacimiento.1  ;
-        this.periodo.1 = periodo.1 ;
-        this.estu_estudiante.1 = estu_estudiante.1 ;
-        this.estu_pais_reside.1 = estu_pais_reside.1 ;
-        this.estu_depto_reside.1 = estu_depto_reside.1 ;
-        this.estu_cod_reside_depto.1 = estu_cod_reside_depto.1  ;
-        this.estu_mcpio_reside.1 = estu_mcpio_reside.1 ;
-        this.estu_cod_reside_mcpio.1 = estu_cod_reside_mcpio.1 ;
+        this.estu_tipodocumento1 = estu_tipodocumento1 ;
+        this.estu_nacionalidad1 = estu_nacionalidad1  ;
+        this.estu_genero1 = estu_genero1  ;
+        this.estu_fechanacimiento1 = estu_fechanacimiento1  ;
+        this.periodo1 = periodo1 ;
+        this.estu_estudiante1 = estu_estudiante1 ;
+        this.estu_pais_reside1 = estu_pais_reside1 ;
+        this.estu_depto_reside1 = estu_depto_reside1 ;
+        this.estu_cod_reside_depto1 = estu_cod_reside_depto1  ;
+        this.estu_mcpio_reside1 = estu_mcpio_reside1 ;
+        this.estu_cod_reside_mcpio1 = estu_cod_reside_mcpio1 ;
         this.estu_areareside = estu_areareside ;
         this.estu_valorpensioncolegio = estu_valorpensioncolegio ;
-        this.fami_educacionpadre.1 = fami_educacionpadre.1 ;
-        this.fami_educacionmadre.1 = fami_educacionmadre.1 ;
-        this.fami_ocupacionpadre.1 = fami_ocupacionpadre.1 ;
-        this.fami_ocupacionmadre.1 = fami_ocupacionmadre.1 ;
-        this.fami_estratovivienda.1 = fami_estratovivienda.1 ;
+        this.fami_educacionpadre1 = fami_educacionpadre1 ;
+        this.fami_educacionmadre1 = fami_educacionmadre1 ;
+        this.fami_ocupacionpadre1 = fami_ocupacionpadre1 ;
+        this.fami_ocupacionmadre1 = fami_ocupacionmadre1 ;
+        this.fami_estratovivienda1 = fami_estratovivienda1 ;
         this.fami_nivelsisben = fami_nivelsisben ;
         this.fami_pisoshogar = fami_pisoshogar ;
-        this.fami_tieneinternet.1 =  fami_tieneinternet.1;
-        this.fami_tienecomputador.1 = fami_tienecomputador.1 ;
+        this.fami_tieneinternet1 =  fami_tieneinternet1;
+        this.fami_tienecomputador1 = fami_tienecomputador1 ;
         this.fami_tienemicroondas = fami_tienemicroondas ;
         this.fami_tienehorno = fami_tienehorno ;
-        this.fami_tieneautomovil.1 = fami_tieneautomovil.1 ;
+        this.fami_tieneautomovil1 = fami_tieneautomovil1 ;
         this.fami_tienedvd = fami_tienedvd ;
-        this.fami_tiene_nevera.1 = fami_tiene_nevera.1 ;
-        this.fami_tiene_celular.1 = fami_tiene_celular.1 ;
-        this.fami_telefono.1 = fami_telefono.1 ;
+        this.fami_tiene_nevera1 = fami_tiene_nevera1 ;
+        this.fami_tiene_celular1 = fami_tiene_celular1 ;
+        this.fami_telefono1 = fami_telefono1 ;
         this.fami_ingresofmiliarmensual = fami_ingresofmiliarmensual ;
         this.estu_antecedentes = estu_antecedentes ;
         this.estu_trabajaactualmente = estu_trabajaactualmente  ;
@@ -345,16 +345,14 @@ public class Dato {
         return estu_areareside;
     }
 
-    public double getEstu_cod_reside_depto() {
-        return estu_cod_reside_depto;
-    }
+    public double getEstu_cod_reside_depto() { return estu_cod_reside_depto1; }
 
     public double getEstu_cod_reside_mcpio() {
-        return estu_cod_reside_mcpio;
+        return estu_cod_reside_mcpio1;
     }
 
     public double getEstu_consecutivo() {
-        return estu_consecutivo;
+        return estu_consecutivo1;
     }
 
     public double getEstu_cursodocentesies() {
@@ -370,11 +368,11 @@ public class Dato {
     }
 
     public double getEstu_depto_reside() {
-        return estu_depto_reside;
+        return estu_depto_reside1;
     }
 
     public double getEstu_estudiante() {
-        return estu_estudiante;
+        return estu_estudiante1;
     }
 
     public double getEstu_expectativas() {
@@ -385,12 +383,10 @@ public class Dato {
         return estu_exterior;
     }
 
-    public double getEstu_fechanacimiento() {
-        return estu_fechanacimiento;
-    }
+    public double getEstu_fechanacimiento() { return estu_fechanacimiento1; }
 
     public double getEstu_genero() {
-        return estu_genero;
+        return estu_genero1;
     }
 
     public double getEstu_inst_cod_departamento() {
@@ -398,15 +394,13 @@ public class Dato {
     }
 
     public double getEstu_mcpio_reside() {
-        return estu_mcpio_reside;
+        return estu_mcpio_reside1;
     }
 
-    public double getEstu_nacionalidad() {
-        return estu_nacionalidad;
-    }
+    public double getEstu_nacionalidad() { return estu_nacionalidad1; }
 
     public double getEstu_pais_reside() {
-        return estu_pais_reside;
+        return estu_pais_reside1;
     }
 
     public double getEstu_simulacrotipoicfes() {
@@ -418,7 +412,7 @@ public class Dato {
     }
 
     public double getEstu_tipodocumento() {
-        return estu_tipodocumento;
+        return estu_tipodocumento1;
     }
 
     public double getEstu_tomo_cursopreparacion() {
@@ -438,15 +432,15 @@ public class Dato {
     }
 
     public double getFami_educacionmadre() {
-        return fami_educacionmadre;
+        return fami_educacionmadre1;
     }
 
     public double getFami_educacionpadre() {
-        return fami_educacionpadre;
+        return fami_educacionpadre1;
     }
 
     public double getFami_estratovivienda() {
-        return fami_estratovivienda;
+        return fami_estratovivienda1;
     }
 
     public double getFami_ingresofmiliarmensual() {
@@ -462,11 +456,11 @@ public class Dato {
     }
 
     public double getFami_ocupacionmadre() {
-        return fami_ocupacionmadre;
+        return fami_ocupacionmadre1;
     }
 
     public double getFami_ocupacionpadre() {
-        return fami_ocupacionpadre;
+        return fami_ocupacionpadre1;
     }
 
     public double getFami_pisoshogar() {
@@ -474,23 +468,21 @@ public class Dato {
     }
 
     public double getFami_telefono() {
-        return fami_telefono;
+        return fami_telefono1;
     }
 
     public double getFami_tiene_celular() {
-        return fami_tiene_celular;
+        return fami_tiene_celular1;
     }
 
     public double getFami_tiene_nevera() {
-        return fami_tiene_nevera;
+        return fami_tiene_nevera1;
     }
 
-    public double getFami_tieneautomovil() {
-        return fami_tieneautomovil;
-    }
+    public double getFami_tieneautomovil() { return fami_tieneautomovil1; }
 
     public double getFami_tienecomputador() {
-        return fami_tienecomputador;
+        return fami_tienecomputador1;
     }
 
     public double getFami_tienedvd() {
@@ -502,7 +494,7 @@ public class Dato {
     }
 
     public double getFami_tieneinternet() {
-        return fami_tieneinternet;
+        return fami_tieneinternet1;
     }
 
     public double getFami_tienemicroondas() {
@@ -586,13 +578,147 @@ public class Dato {
             case 6:
                 return getCole_depto_ubicacion();
             case 7:
-                return getCole_mcpio_ubicacion();
+                return getCole_cod_mcpio_ubicacion();
             case 8:
                 return getCole_codigo_icfes();
             case 9:
                 return getCole_cod_depto_ubicacion();
             case 10:
                 return getCole_genero();
+            case 11:
+                return getCole_jornada();
+            case 12:
+                return getCole_mcpio_ubicacion();
+            case 13:
+                return getCole_naturaleza();
+            case 14:
+                return getCole_nombre_establecimiento();
+            case 15:
+                return getCole_nombre_sede();
+            case 16:
+                return getCole_sede_principal();
+            case 17:
+                return getDesemp_ingles();
+            case 18:
+                return getDesemp_prof();
+            case 19:
+                getEstu_actividadrefuerzoareas();
+            case 20:
+                getEstu_actividadrefuerzogeneric();
+            case 21:
+                return getEstu_antecedentes();
+            case 22:
+                return getEstu_areareside();
+            case 23:
+                return getEstu_cod_reside_depto();
+            case 24:
+                return getEstu_cod_reside_mcpio();
+            case 25:
+                return getEstu_consecutivo();
+            case 26:
+                return getEstu_cursodocentesies();
+            case 27:
+                return getEstu_cursoiesapoyoexterno();
+            case 28:
+                return getEstu_cursoiesexterna();
+            case 29:
+                return getEstu_depto_reside();
+            case 30:
+                return getEstu_estudiante();
+            case 31:
+                return getEstu_expectativas();
+            case 32:
+                return getEstu_exterior();
+            case 33:
+                return getEstu_fechanacimiento();
+            case 34:
+                return getEstu_genero();
+            case 35:
+                return getEstu_inst_cod_departamento();
+            case 36:
+                return getEstu_mcpio_reside();
+            case 37:
+                return getEstu_nacionalidad();
+            case 38:
+                return getEstu_pais_reside();
+            case 39:
+                return getEstu_simulacrotipoicfes();
+            case 40:
+                return getEstu_tieneetnia();
+            case 41:
+                return getEstu_tipodocumento();
+            case 42:
+                return getEstu_tomo_cursopreparacion();
+            case 43:
+                return getEstu_trabajaactualmente();
+            case 44:
+                return getEstu_valorpensioncolegio();
+            case 45:
+                return getExito();
+            case 46:
+                return getFami_educacionmadre();
+            case 47:
+                return getFami_educacionpadre();
+            case 48:
+                return getFami_estratovivienda();
+            case 49:
+                return getFami_ingresofmiliarmensual();
+            case 50:
+                return getFami_nivelsisben();
+            case 51:
+                return getFami_numlibros();
+            case 52:
+                return getFami_ocupacionmadre();
+            case 53:
+                return getFami_ocupacionpadre();
+            case 54:
+                return getFami_pisoshogar();
+            case 55:
+                return getFami_telefono();
+            case 56:
+                return getFami_tiene_celular();
+            case 57:
+                return getFami_tiene_nevera();
+            case 58:
+                return getFami_tieneautomovil();
+            case 59:
+                return getFami_tienecomputador();
+            case 60:
+                return getFami_tienedvd();
+            case 61:
+                return getFami_tienehorno();
+            case 62:
+                return getFami_tieneinternet();
+            case 63:
+                return getFami_tienemicroondas();
+            case 64:
+                return getFami_trabajolabormadre();
+            case 65:
+                return getFami_trabajolaborpadre();
+            case 66:
+                return getPeriodo();
+            case 67:
+                return getProfundiza();
+            case 68:
+                return getPunt_biologia();
+            case 69:
+                return getPunt_ciencias_sociales();
+            case 70:
+                return getPunt_filosofia();
+            case 71:
+                return getPunt_fisica();
+            case 72:
+                return getPunt_ingles();
+            case 73:
+                return getPunt_lenguaje();
+            case 74:
+                return getPunt_matematicas();
+            case 75:
+                return getPunt_quimica();
+            case 76:
+                return getPuntaje_prof();
+
+
 
             default:
                 throw new Exception("No existe el tipo de dato mencionado");
