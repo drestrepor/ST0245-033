@@ -1,5 +1,3 @@
-import javax.crypto.spec.PSource;
-import java.awt.desktop.SystemEventListener;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -8,12 +6,12 @@ import java.util.LinkedList;
  * nodes for the decision tree.
  */
 public class Node {
-    public double algo;
-    public double variable;
-    public double matriz[][];
-    public double impurezas[][];
+    public int algo;
+    public String variable;
+    public String[][] matriz;
+    public String[][] impurezas;
     public int exito[];
-    public double impureza;
+    public String impureza;
     public Node izq;
     public Node der;
 
@@ -24,7 +22,7 @@ public class Node {
      *                      easily to the data.
      * @param exito exito matrix.
      */
-    public Node(double [][] matrizDeDatos, int [] exito) {
+    public Node(String[][] matrizDeDatos, int [] exito) {
         matriz = matrizDeDatos;
         impurezas = llenarImpureza(matriz,exito);
         this.exito = exito;
@@ -33,9 +31,9 @@ public class Node {
             impureza = variableConMenorImpureza(impurezas);
             variable = equivalencia(matriz,impurezas,impureza);
             algo = algo(matriz, variable);
-            double[][] matrizIzq = mayores(matriz, (int) algo, variable);
+            String[][] matrizIzq = mayores(matriz, (int) algo, variable);
             //LinkedList<Integer> indiM = indicesMayores(matriz, (int) algo, variable);
-            double[][] matrizDer = menores(matriz, (int) algo, variable);
+            String[][] matrizDer = menores(matriz, (int) algo, variable);
             //LinkedList<Integer> indimenor = indicesMenores(matriz, (int) algo, variable);
             //int [] exitoIzq = exitoMenor(exito,indimenor);
             //int [] exitoDer = exitoMayor(exito,indiM);
@@ -53,7 +51,7 @@ public class Node {
      * @param algo
      * @return
      */
-    public static int algo(double[][] matriz, double algo){
+    public static int algo(String[][] matriz, String algo){
         long inicio_algo = System.currentTimeMillis();
 
         for (int i = 0; i < matriz[0].length ; i++) {
@@ -78,12 +76,12 @@ public class Node {
      * @param valorImpureza
      * @return
      */
-    public static double equivalencia(double matriz[][],double [][] impureza, double valorImpureza ) {
+    public static String equivalencia(String[][] matriz, String[][] impureza, String valorImpureza ) {
         long inicio_equiv = System.currentTimeMillis();
 
         for (int j = 0; j <impureza[0].length ; j++) {
             for (int i = 0; i <impureza.length ; i++) {
-                if (impureza[i][j] == valorImpureza) {
+                if (Double.parseDouble(impureza[i][j]) == Double.parseDouble(valorImpureza)) {
                     //System.out.println("Está en la posición: " + "[" + j +   "]" + "[" + i + "]");
                     return matriz[i][j];
                 }
@@ -94,7 +92,7 @@ public class Node {
         long total_equiv = fin_equiv - inicio_equiv;
         System.out.println("Tiempo de ejecución para equivalencia(__): " + total_equiv + "ms");
 
-        return 0;
+        return "";
     }
 
     /**
@@ -128,11 +126,11 @@ public class Node {
      * @param impureza5
      * @return
      */
-    public static double variableConMenorImpureza(double[][]impureza5) {
-        double a = impureza5[0][0];
+    public static String variableConMenorImpureza(String[][] impureza5) {
+        String a = impureza5[0][0];
         for (int i = 0; i < impureza5[0].length ; i++) {
             for (int j = 0; j <impureza5.length; j++) {
-                if(impureza5[j][i] < a){
+                if(Double.parseDouble(impureza5[j][i]) < Double.parseDouble(a)){
                     a = impureza5[j][i];
                 }
             }
@@ -148,10 +146,10 @@ public class Node {
      * @param colum
      * @return
      */
-    public static double[][] recortada (double[][]matriz,int colum) {
+    public static String[][] recortada (String[][] matriz, int colum) {
         long inicio_recortada = System.currentTimeMillis();
 
-        double[][] recortada = new double[matriz.length][(matriz[0].length-1)];
+        String[][] recortada = new String[matriz.length][(matriz[0].length-1)];
         int w = 0;
         for (int i = 0; i < matriz[0].length ; i++) {
             if (i == colum){
@@ -174,28 +172,28 @@ public class Node {
      * This method calculates the gini impurity
      * @param matriz
      */
-    public static double[][] llenarImpureza(double [][] matriz, int [] exito) {
+    public static String[][] llenarImpureza(String[][] matriz, int [] exito) {
         long inicio_llenar = System.currentTimeMillis();
 
         //Metodo para llenar la matriz
-        double[][] impureza5 = new double[matriz.length][matriz[0].length];
+        String[][] impureza5 = new String[matriz.length][matriz[0].length];
         for (int i = 0; i < matriz[0].length ; i++) {
             for (int j = 0; j < matriz.length ; j++) {
-                ArrayList<Double> derecha = new ArrayList<>();
-                ArrayList<Double> izquierda = new ArrayList<>();
-                double variableParte= matriz[j][i];
+                ArrayList<String > derecha = new ArrayList<>();
+                ArrayList<String> izquierda = new ArrayList<>();
+                String variableParte= matriz[j][i];
                 int mayores= 0;
                 int menores = 0;
                 int royaI = 0;
                 int noRoyaI = 0;
                 int royaD = 0;
                 int noRoyaD = 0;
-                double impureza;
-                double impurezaD;
-                double impurezaI;
+                String impureza;
+                String impurezaD;
+                String impurezaI;
 
                 for (int k = 0; k < matriz.length ; k++) {
-                    if (matriz[k][i] <= variableParte) {
+                    if (Double.parseDouble(matriz[k][i]) <= Double.parseDouble(variableParte)) {
                         if (exito[k]==1){
                             royaI++;
                         }else if(exito[k]==0){
@@ -213,9 +211,9 @@ public class Node {
                         derecha.add(matriz[k][i]);
                     }
                 }
-                impurezaD = (double) 1-(Math.pow(((double)royaD/derecha.size()),2)+ Math.pow(((double)noRoyaD/derecha.size()),2));
-                impurezaI = (double) 1-(Math.pow(((double)royaI/izquierda.size()),2)+ Math.pow(((double)noRoyaI/izquierda.size()),2));
-                impureza=((menores*impurezaI)+(mayores*impurezaD))/(mayores+menores);
+                impurezaD = String.valueOf((double) 1-(Math.pow(((double)royaD/derecha.size()),2)+ Math.pow(((double)noRoyaD/derecha.size()),2)));
+                impurezaI = String.valueOf((double) 1-(Math.pow(((double)royaI/izquierda.size()),2)+ Math.pow(((double)noRoyaI/izquierda.size()),2)));
+                impureza= String.valueOf(((menores*Double.parseDouble(impurezaI))+(mayores*Double.parseDouble(impurezaD))/(mayores+menores)));
                 impureza5[j][i]=impureza;
                 System.out.println("Variable"+"["+i+"]"+"["+j+"]" +" Estos son los mayores que "+variableParte+": "+mayores+" y de esos mayores "+royaD+" tienen roya y "+noRoyaD+" no tienen roya");
                 System.out.println("Variable"+"["+i+"]"+"["+j+"]" +" Estos son los menores que "+variableParte+": "+menores+" y de esos menores "+royaI+" tienen roya y "+noRoyaI+" no tienen roya");
@@ -247,15 +245,15 @@ public class Node {
      * @param valor
      * @return
      */
-    public static double[][]  mayores (double [][] matriz, int colum, double valor){
+    public static String[][]  mayores (String[][] matriz, int colum, String valor){
         long inicio_mayores = System.currentTimeMillis();
 
         LinkedList<Integer> indicesDeLasFilasMayores = new LinkedList();
         for (int i = 0; i < matriz.length  ; i++) {
-            if (matriz[i][colum] >= valor)
+            if (Double.parseDouble(matriz[i][colum]) >= Double.parseDouble(valor))
                 indicesDeLasFilasMayores.add(i);
         }
-        double [][] grandes = new double[indicesDeLasFilasMayores.size()][matriz[0].length];
+        String [][] grandes = new String[indicesDeLasFilasMayores.size()][matriz[0].length];
         int indice = 0;
         for (int i = 0; i < grandes.length ; i++) {
             for (int j = 0; j < grandes[0].length; j++) {
@@ -263,7 +261,7 @@ public class Node {
             }
             indice++;
         }
-        double[][] recorte = recortada(grandes,colum);
+        String[][] recorte = recortada(grandes,colum);
 
         long fin_mayores = System.currentTimeMillis();
         long total_mayores = fin_mayores - inicio_mayores;
@@ -325,15 +323,15 @@ public class Node {
      * @param valor
      * @return
      */
-    public static double[][]  menores (double [][] matriz, int colum, double valor) {
+    public static String[][]  menores (String[][] matriz, int colum, String valor) {
         long inicio_menores = System.currentTimeMillis();
 
         LinkedList<Integer> indicesMenores = new LinkedList();
         for (int i = 0; i < matriz.length  ; i++) {
-            if (matriz[i][colum] < valor)
+            if (Double.parseDouble(matriz[i][colum]) < Double.parseDouble(valor))
                 indicesMenores.add(i);
         }
-        double [][] pequeños = new double[indicesMenores.size()][matriz[0].length];
+        String [][] pequeños = new String[indicesMenores.size()][matriz[0].length];
         int indice = 0;
         for (int i = 0; i < pequeños.length ; i++) {
             for (int j = 0; j < pequeños[0].length; j++) {
@@ -341,7 +339,7 @@ public class Node {
             }
             indice++;
         }
-        double[][] recorte = recortada(pequeños,colum);
+        String[][] recorte = recortada(pequeños,colum);
 
         long fin_menores = System.currentTimeMillis();
         long total_menores = fin_menores - inicio_menores;

@@ -1,83 +1,87 @@
+import com.sun.jdi.request.StepRequest;
+
+import javax.management.monitor.StringMonitor;
+
 public class Dato {
 
-    double estu_consecutivo1;
-    double estu_exterior;
-    double periodo;
-    double estu_tieneetnia;
-    double estu_tomo_cursopreparacion;
-    double estu_cursodocentesies;
-    double estu_cursoiesapoyoexterno;
-    double estu_cursoiesexterna;
-    double estu_simulacrotipoicfes;
-    double estu_actividadrefuerzoareas;
-    double estu_actividadrefuerzogeneric;
-    double fami_trabajolaborpadre;
-    double fami_trabajolabormadre;
-    double fami_numlibros;
-    double estu_inst_cod_departamento;
-    double estu_tipodocumento1;
-    double estu_nacionalidad1;
-    double estu_genero1;
-    double estu_fechanacimiento1;
-    double periodo1;
-    double estu_estudiante1;
-    double estu_pais_reside1;
-    double estu_depto_reside1;
-    double estu_cod_reside_depto1;
-    double estu_mcpio_reside1;
-    double estu_cod_reside_mcpio1;
-    double estu_areareside;
-    double estu_valorpensioncolegio;
-    double fami_educacionpadre1;
-    double fami_educacionmadre1;
-    double fami_ocupacionpadre1;
-    double fami_ocupacionmadre1;
-    double fami_estratovivienda1;
-    double fami_nivelsisben;
-    double fami_pisoshogar;
-    double fami_tieneinternet1;
-    double fami_tienecomputador1;
-    double fami_tienemicroondas;
-    double fami_tienehorno;
-    double fami_tieneautomovil1;
-    double fami_tienedvd;
-    double fami_tiene_nevera1;
-    double fami_tiene_celular1;
-    double fami_telefono1;
-    double fami_ingresofmiliarmensual;
-    double estu_trabajaactualmente;
-    double estu_antecedentes;
-    double estu_expectativas;
-    double cole_codigo_icfes;
-    double cole_cod_dane_establecimiento;
-    double cole_nombre_establecimiento;
-    double cole_genero;
-    double cole_naturaleza;
-    double cole_calendario;
-    double cole_bilingue;
-    double cole_caracter;
-    double cole_cod_dane_sede;
-    double cole_nombre_sede;
-    double cole_sede_principal;
-    double cole_area_ubicacion;
-    double cole_jornada;
-    double cole_cod_mcpio_ubicacion;
-    double cole_mcpio_ubicacion;
-    double cole_cod_depto_ubicacion;
-    double cole_depto_ubicacion;
-    double punt_lenguaje;
-    double punt_matematicas;
-    double punt_biologia;
-    double punt_quimica;
-    double punt_fisica;
-    double punt_ciencias_sociales;
-    double punt_filosofia;
-    double punt_ingles;
-    double desemp_ingles;
-    double profundiza;
-    double puntaje_prof;
-    double desemp_prof;
-    double exito;
+    String estu_consecutivo1;
+    String estu_exterior;
+    String periodo;
+    String estu_tieneetnia;
+    String estu_tomo_cursopreparacion;
+    String estu_cursodocentesies;
+    String estu_cursoiesapoyoexterno;
+    String estu_cursoiesexterna;
+    String estu_simulacrotipoicfes;
+    String estu_actividadrefuerzoareas;
+    String estu_actividadrefuerzogeneric;
+    String fami_trabajolaborpadre;
+    String fami_trabajolabormadre;
+    String fami_numlibros;
+    String estu_inst_cod_departamento;
+    String estu_tipodocumento1;
+    String estu_nacionalidad1;
+    String estu_genero1;
+    String estu_fechanacimiento1;
+    String periodo1;
+    String estu_estudiante1;
+    String estu_pais_reside1;
+    String estu_depto_reside1;
+    String estu_cod_reside_depto1;
+    String estu_mcpio_reside1;
+    String estu_cod_reside_mcpio1;
+    String estu_areareside;
+    String estu_valorpensioncolegio;
+    String fami_educacionpadre1;
+    String fami_educacionmadre1;
+    String fami_ocupacionpadre1;
+    String fami_ocupacionmadre1;
+    String fami_estratovivienda1;
+    String fami_nivelsisben;
+    String fami_pisoshogar;
+    String fami_tieneinternet1;
+    String fami_tienecomputador1;
+    String fami_tienemicroondas;
+    String fami_tienehorno;
+    String fami_tieneautomovil1;
+    String fami_tienedvd;
+    String fami_tiene_nevera1;
+    String fami_tiene_celular1;
+    String fami_telefono1;
+    String fami_ingresofmiliarmensual;
+    String estu_trabajaactualmente;
+    String estu_antecedentes;
+    String estu_expectativas;
+    String cole_codigo_icfes;
+    String cole_cod_dane_establecimiento;
+    String cole_nombre_establecimiento;
+    String cole_genero;
+    String cole_naturaleza;
+    String cole_calendario;
+    String cole_bilingue;
+    String cole_caracter;
+    String cole_cod_dane_sede;
+    String cole_nombre_sede;
+    String cole_sede_principal;
+    String cole_area_ubicacion;
+    String cole_jornada;
+    String cole_cod_mcpio_ubicacion;
+    String cole_mcpio_ubicacion;
+    String cole_cod_depto_ubicacion;
+    String cole_depto_ubicacion;
+    String punt_lenguaje;
+    String punt_matematicas;
+    String punt_biologia;
+    String punt_quimica;
+    String punt_fisica;
+    String punt_ciencias_sociales;
+    String punt_filosofia;
+    String punt_ingles;
+    String desemp_ingles;
+    String profundiza;
+    String puntaje_prof;
+    String desemp_prof;
+    String exito;
 
 
     /**
@@ -162,17 +166,17 @@ public class Dato {
      @param  exito;
 
      */
-    public Dato(double estu_consecutivo1,  double estu_exterior,   double periodo, double estu_tieneetnia, double estu_tomo_cursopreparacion,  double estu_cursodocentesies,   double estu_cursoiesapoyoexterno,
-                double estu_cursoiesexterna,    double estu_simulacrotipoicfes, double estu_actividadrefuerzoareas, double estu_actividadrefuerzogeneric,   double fami_trabajolaborpadre,  double fami_trabajolabormadre,
-                double fami_numlibros,  double estu_inst_cod_departamento,  double estu_tipodocumento1,    double estu_nacionalidad1, double estu_genero1,   double estu_fechanacimiento1,  double periodo1,
-                double estu_estudiante1,   double estu_pais_reside1,  double estu_depto_reside1, double estu_cod_reside_depto1, double estu_mcpio_reside1, double estu_cod_reside_mcpio1, double estu_areareside,
-                double estu_valorpensioncolegio,    double fami_educacionpadre1,   double fami_educacionmadre1,   double fami_ocupacionpadre1,   double fami_ocupacionmadre1,   double fami_estratovivienda1,
-                double fami_nivelsisben,    double fami_pisoshogar, double fami_tieneinternet1,    double fami_tienecomputador1,  double fami_tienemicroondas,    double fami_tienehorno, double fami_tieneautomovil1,
-                double fami_tienedvd,   double fami_tiene_nevera1, double fami_tiene_celular1,    double fami_telefono1, double fami_ingresofmiliarmensual,  double estu_trabajaactualmente, double estu_antecedentes,
-                double estu_expectativas,   double cole_codigo_icfes,   double cole_cod_dane_establecimiento,   double cole_nombre_establecimiento, double cole_genero, double cole_naturaleza, double cole_calendario,
-                double cole_bilingue,   double cole_caracter,   double cole_cod_dane_sede,  double cole_nombre_sede,  double cole_sede_principal, double cole_area_ubicacion, double cole_jornada,    double cole_cod_mcpio_ubicacion,
-                double cole_mcpio_ubicacion,    double cole_cod_depto_ubicacion,    double cole_depto_ubicacion,    double punt_lenguaje,   double punt_matematicas,  double punt_biologia,   double punt_quimica,    double punt_fisica,  double punt_ciencias_sociales,
-                double punt_filosofia,   double punt_ingles,  double desemp_ingles,    double profundiza,   double puntaje_prof,     double desemp_prof,  double exito) {
+    public Dato(String estu_consecutivo1,  String estu_exterior,   String periodo, String estu_tieneetnia, String estu_tomo_cursopreparacion,  String estu_cursodocentesies,   String estu_cursoiesapoyoexterno,
+                String estu_cursoiesexterna,    String estu_simulacrotipoicfes, String estu_actividadrefuerzoareas, String estu_actividadrefuerzogeneric,   String fami_trabajolaborpadre,  String fami_trabajolabormadre,
+                String fami_numlibros,  String estu_inst_cod_departamento,  String estu_tipodocumento1,    String estu_nacionalidad1, String estu_genero1,   String estu_fechanacimiento1,  String periodo1,
+                String estu_estudiante1,   String estu_pais_reside1,  String estu_depto_reside1, String estu_cod_reside_depto1, String estu_mcpio_reside1, String estu_cod_reside_mcpio1, String estu_areareside,
+                String estu_valorpensioncolegio,    String fami_educacionpadre1,   String fami_educacionmadre1,   String fami_ocupacionpadre1,   String fami_ocupacionmadre1,   String fami_estratovivienda1,
+                String fami_nivelsisben,    String fami_pisoshogar, String fami_tieneinternet1,    String fami_tienecomputador1,  String fami_tienemicroondas,    String fami_tienehorno, String fami_tieneautomovil1,
+                String fami_tienedvd,   String fami_tiene_nevera1, String fami_tiene_celular1,    String fami_telefono1, String fami_ingresofmiliarmensual,  String estu_trabajaactualmente, String estu_antecedentes,
+                String estu_expectativas,   String cole_codigo_icfes,   String cole_cod_dane_establecimiento,   String cole_nombre_establecimiento, String cole_genero, String cole_naturaleza, String cole_calendario,
+                String cole_bilingue,   String cole_caracter,   String cole_cod_dane_sede,  String cole_nombre_sede,  String cole_sede_principal, String cole_area_ubicacion, String cole_jornada,    String cole_cod_mcpio_ubicacion,
+                String cole_mcpio_ubicacion,    String cole_cod_depto_ubicacion,    String cole_depto_ubicacion,    String punt_lenguaje,   String punt_matematicas,  String punt_biologia,   String punt_quimica,    String punt_fisica,  String punt_ciencias_sociales,
+                String punt_filosofia,   String punt_ingles,  String desemp_ingles,    String profundiza,   String puntaje_prof,     String desemp_prof,  String exito) {
         this.estu_consecutivo1 = estu_consecutivo1 ;
         this.estu_exterior = estu_exterior ;
         this.periodo = periodo ;
@@ -253,303 +257,303 @@ public class Dato {
         this.exito = exito  ;
     }
 
-    public double getCole_area_ubicacion() {
+    public String getCole_area_ubicacion() {
         return cole_area_ubicacion;
     }
 
-    public double getCole_bilingue() {
+    public String getCole_bilingue() {
         return cole_bilingue;
     }
 
-    public double getCole_calendario() {
+    public String getCole_calendario() {
         return cole_calendario;
     }
 
-    public double getCole_caracter() {
+    public String getCole_caracter() {
         return cole_caracter;
     }
 
-    public double getCole_cod_dane_establecimiento() {
+    public String getCole_cod_dane_establecimiento() {
         return cole_cod_dane_establecimiento;
     }
 
-    public double getCole_cod_dane_sede() {
+    public String getCole_cod_dane_sede() {
         return cole_cod_dane_sede;
     }
 
-    public double getCole_cod_depto_ubicacion() {
+    public String getCole_cod_depto_ubicacion() {
         return cole_cod_depto_ubicacion;
     }
 
-    public double getCole_cod_mcpio_ubicacion() {
+    public String getCole_cod_mcpio_ubicacion() {
         return cole_cod_mcpio_ubicacion;
     }
 
-    public double getCole_codigo_icfes() {
+    public String getCole_codigo_icfes() {
         return cole_codigo_icfes;
     }
 
-    public double getCole_depto_ubicacion() {
+    public String getCole_depto_ubicacion() {
         return cole_depto_ubicacion;
     }
 
-    public double getCole_genero() {
+    public String getCole_genero() {
         return cole_genero;
     }
 
-    public double getCole_jornada() {
+    public String getCole_jornada() {
         return cole_jornada;
     }
 
-    public double getCole_mcpio_ubicacion() {
+    public String getCole_mcpio_ubicacion() {
         return cole_mcpio_ubicacion;
     }
 
-    public double getCole_naturaleza() {
+    public String getCole_naturaleza() {
         return cole_naturaleza;
     }
 
-    public double getCole_nombre_establecimiento() {
+    public String getCole_nombre_establecimiento() {
         return cole_nombre_establecimiento;
     }
 
-    public double getCole_nombre_sede() {
+    public String getCole_nombre_sede() {
         return cole_nombre_sede;
     }
 
-    public double getCole_sede_principal() {
+    public String getCole_sede_principal() {
         return cole_sede_principal;
     }
 
-    public double getDesemp_ingles() {
+    public String getDesemp_ingles() {
         return desemp_ingles;
     }
 
-    public double getDesemp_prof() {
+    public String getDesemp_prof() {
         return desemp_prof;
     }
 
-    public double getEstu_actividadrefuerzoareas() {
+    public String getEstu_actividadrefuerzoareas() {
         return estu_actividadrefuerzoareas;
     }
 
-    public double getEstu_actividadrefuerzogeneric() {
+    public String getEstu_actividadrefuerzogeneric() {
         return estu_actividadrefuerzogeneric;
     }
 
-    public double getEstu_antecedentes() {
+    public String getEstu_antecedentes() {
         return estu_antecedentes;
     }
 
-    public double getEstu_areareside() {
+    public String getEstu_areareside() {
         return estu_areareside;
     }
 
-    public double getEstu_cod_reside_depto() { return estu_cod_reside_depto1; }
+    public String getEstu_cod_reside_depto() { return estu_cod_reside_depto1; }
 
-    public double getEstu_cod_reside_mcpio() {
+    public String getEstu_cod_reside_mcpio() {
         return estu_cod_reside_mcpio1;
     }
 
-    public double getEstu_consecutivo() {
+    public String getEstu_consecutivo() {
         return estu_consecutivo1;
     }
 
-    public double getEstu_cursodocentesies() {
+    public String getEstu_cursodocentesies() {
         return estu_cursodocentesies;
     }
 
-    public double getEstu_cursoiesapoyoexterno() {
+    public String getEstu_cursoiesapoyoexterno() {
         return estu_cursoiesapoyoexterno;
     }
 
-    public double getEstu_cursoiesexterna() {
+    public String getEstu_cursoiesexterna() {
         return estu_cursoiesexterna;
     }
 
-    public double getEstu_depto_reside() {
+    public String getEstu_depto_reside() {
         return estu_depto_reside1;
     }
 
-    public double getEstu_estudiante() {
+    public String getEstu_estudiante() {
         return estu_estudiante1;
     }
 
-    public double getEstu_expectativas() {
+    public String getEstu_expectativas() {
         return estu_expectativas;
     }
 
-    public double getEstu_exterior() {
+    public String getEstu_exterior() {
         return estu_exterior;
     }
 
-    public double getEstu_fechanacimiento() { return estu_fechanacimiento1; }
+    public String getEstu_fechanacimiento() { return estu_fechanacimiento1; }
 
-    public double getEstu_genero() {
+    public String getEstu_genero() {
         return estu_genero1;
     }
 
-    public double getEstu_inst_cod_departamento() {
+    public String getEstu_inst_cod_departamento() {
         return estu_inst_cod_departamento;
     }
 
-    public double getEstu_mcpio_reside() {
+    public String getEstu_mcpio_reside() {
         return estu_mcpio_reside1;
     }
 
-    public double getEstu_nacionalidad() { return estu_nacionalidad1; }
+    public String getEstu_nacionalidad() { return estu_nacionalidad1; }
 
-    public double getEstu_pais_reside() {
+    public String getEstu_pais_reside() {
         return estu_pais_reside1;
     }
 
-    public double getEstu_simulacrotipoicfes() {
+    public String getEstu_simulacrotipoicfes() {
         return estu_simulacrotipoicfes;
     }
 
-    public double getEstu_tieneetnia() {
+    public String getEstu_tieneetnia() {
         return estu_tieneetnia;
     }
 
-    public double getEstu_tipodocumento() {
+    public String getEstu_tipodocumento() {
         return estu_tipodocumento1;
     }
 
-    public double getEstu_tomo_cursopreparacion() {
+    public String getEstu_tomo_cursopreparacion() {
         return estu_tomo_cursopreparacion;
     }
 
-    public double getEstu_trabajaactualmente() {
+    public String getEstu_trabajaactualmente() {
         return estu_trabajaactualmente;
     }
 
-    public double getEstu_valorpensioncolegio() {
+    public String getEstu_valorpensioncolegio() {
         return estu_valorpensioncolegio;
     }
 
-    public double getExito() {
+    public String getExito() {
         return exito;
     }
 
-    public double getFami_educacionmadre() {
+    public String getFami_educacionmadre() {
         return fami_educacionmadre1;
     }
 
-    public double getFami_educacionpadre() {
+    public String getFami_educacionpadre() {
         return fami_educacionpadre1;
     }
 
-    public double getFami_estratovivienda() {
+    public String getFami_estratovivienda() {
         return fami_estratovivienda1;
     }
 
-    public double getFami_ingresofmiliarmensual() {
+    public String getFami_ingresofmiliarmensual() {
         return fami_ingresofmiliarmensual;
     }
 
-    public double getFami_nivelsisben() {
+    public String getFami_nivelsisben() {
         return fami_nivelsisben;
     }
 
-    public double getFami_numlibros() {
+    public String getFami_numlibros() {
         return fami_numlibros;
     }
 
-    public double getFami_ocupacionmadre() {
+    public String getFami_ocupacionmadre() {
         return fami_ocupacionmadre1;
     }
 
-    public double getFami_ocupacionpadre() {
+    public String getFami_ocupacionpadre() {
         return fami_ocupacionpadre1;
     }
 
-    public double getFami_pisoshogar() {
+    public String getFami_pisoshogar() {
         return fami_pisoshogar;
     }
 
-    public double getFami_telefono() {
+    public String getFami_telefono() {
         return fami_telefono1;
     }
 
-    public double getFami_tiene_celular() {
+    public String getFami_tiene_celular() {
         return fami_tiene_celular1;
     }
 
-    public double getFami_tiene_nevera() {
+    public String getFami_tiene_nevera() {
         return fami_tiene_nevera1;
     }
 
-    public double getFami_tieneautomovil() { return fami_tieneautomovil1; }
+    public String getFami_tieneautomovil() { return fami_tieneautomovil1; }
 
-    public double getFami_tienecomputador() {
+    public String getFami_tienecomputador() {
         return fami_tienecomputador1;
     }
 
-    public double getFami_tienedvd() {
+    public String getFami_tienedvd() {
         return fami_tienedvd;
     }
 
-    public double getFami_tienehorno() {
+    public String getFami_tienehorno() {
         return fami_tienehorno;
     }
 
-    public double getFami_tieneinternet() {
+    public String getFami_tieneinternet() {
         return fami_tieneinternet1;
     }
 
-    public double getFami_tienemicroondas() {
+    public String getFami_tienemicroondas() {
         return fami_tienemicroondas;
     }
 
-    public double getFami_trabajolabormadre() {
+    public String getFami_trabajolabormadre() {
         return fami_trabajolabormadre;
     }
 
-    public double getFami_trabajolaborpadre() {
+    public String getFami_trabajolaborpadre() {
         return fami_trabajolaborpadre;
     }
 
-    public double getPeriodo() {
+    public String getPeriodo() {
         return periodo;
     }
 
-    public double getProfundiza() {
+    public String getProfundiza() {
         return profundiza;
     }
 
-    public double getPunt_biologia() {
+    public String getPunt_biologia() {
         return punt_biologia;
     }
 
-    public double getPunt_ciencias_sociales() {
+    public String getPunt_ciencias_sociales() {
         return punt_ciencias_sociales;
     }
 
-    public double getPunt_filosofia() {
+    public String getPunt_filosofia() {
         return punt_filosofia;
     }
 
-    public double getPunt_fisica() {
+    public String getPunt_fisica() {
         return punt_fisica;
     }
 
-    public double getPunt_ingles() {
+    public String getPunt_ingles() {
         return punt_ingles;
     }
 
-    public double getPunt_lenguaje() {
+    public String getPunt_lenguaje() {
         return punt_lenguaje;
     }
 
-    public double getPunt_matematicas() {
+    public String getPunt_matematicas() {
         return punt_matematicas;
     }
 
-    public double getPunt_quimica() {
+    public String getPunt_quimica() {
         return punt_quimica;
     }
 
-    public double getPuntaje_prof() {
+    public String getPuntaje_prof() {
         return puntaje_prof;
     }
 
@@ -561,7 +565,7 @@ public class Dato {
      * @return valor.
      * @throws Exception que dice que no existe el dato pedido.
      */
-    public double getValue(int i) throws Exception {
+    public String getValue(int i) throws Exception {
         switch (i) {
             case 0:
                 return getCole_area_ubicacion();

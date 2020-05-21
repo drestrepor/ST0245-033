@@ -23,7 +23,7 @@ public class Lectura {
 
         leer_archivo(seleccionarDataset());
         int exito[] = llenarexito();
-        double matriz[][] = recolectarDatos();
+        String matriz[][] = recolectarDatos();
 
         Node raizDelArbol = new Node(matriz, exito);
         Tree tree = new Tree(raizDelArbol);
@@ -59,7 +59,7 @@ public class Lectura {
                     "  cole_nombre_establecimiento cole_genero cole_naturaleza cole_calendario cole_bilingue   cole_caracter   cole_cod_dane_sede  cole_nombre_sede    cole_sede_principal cole_area_ubicacion cole_jornada    cole_cod_mcpio_ubicacion    cole_mcpio_ubicacion    cole_cod_depto_ubicacion " +
                     "   cole_depto_ubicacion    punt_lenguaje   punt_matematicas    punt_biologia   punt_quimica    punt_fisica punt_ciencias_sociales  punt_filosofia  punt_ingles desemp_ingles   profundiza  puntaje_prof    desemp_prof exito");
             scan.nextLine();
-            String[] str = new String[77];
+            String[] str = new String[78];
             System.out.println("estu_consecutivo.1  estu_exterior  periodo estu_tieneetnia estu_tomo_cursopreparacion" +  "estu_cursodocentesies   estu_cursoiesapoyoexterno   estu_cursoiesexterna" +
                     "estu_simulacrotipoicfes estu_actividadrefuerzoareas estu_actividadrefuerzogeneric   fami_trabajolaborpadre  fami_trabajolabormadre  fami_numlibros  estu_inst_cod_departamento" +
                     "estu_tipodocumento.1    estu_nacionalidad.1 estu_genero.1   estu_fechanacimiento.1  periodo.1   estu_estudiante.1   estu_pais_reside.1  estu_depto_reside.1 estu_cod_reside_depto.1" +
@@ -79,21 +79,21 @@ public class Lectura {
                     }
                 }
 
-                datos.add(new Dato(Double.parseDouble(str[0]), Double.parseDouble(str[1]),
-                        Double.parseDouble(str[2]), Double.parseDouble(str[3]),
-                        Double.parseDouble(str[4]), Double.parseDouble(str[5]), Double.parseDouble(str[6]), Double.parseDouble(str[7]), Double.parseDouble(str[8]), Double.parseDouble(str[9]),
-                        Double.parseDouble(str[10]), Double.parseDouble(str[11]), Double.parseDouble(str[12]), Double.parseDouble(str[13]), Double.parseDouble(str[14]), Double.parseDouble(str[15]),
-                        Double.parseDouble(str[16]), Double.parseDouble(str[17]), Double.parseDouble(str[18]), Double.parseDouble(str[19]), Double.parseDouble(str[20]), Double.parseDouble(str[21]),
-                        Double.parseDouble(str[22]), Double.parseDouble(str[23]), Double.parseDouble(str[24]), Double.parseDouble(str[25]), Double.parseDouble(str[26]), Double.parseDouble(str[27]),
-                        Double.parseDouble(str[28]), Double.parseDouble(str[29]), Double.parseDouble(str[30]), Double.parseDouble(str[31]), Double.parseDouble(str[32]), Double.parseDouble(str[33]),
-                        Double.parseDouble(str[34]), Double.parseDouble(str[35]), Double.parseDouble(str[36]), Double.parseDouble(str[37]), Double.parseDouble(str[38]), Double.parseDouble(str[39]),
-                        Double.parseDouble(str[40]), Double.parseDouble(str[41]), Double.parseDouble(str[42]), Double.parseDouble(str[43]), Double.parseDouble(str[44]), Double.parseDouble(str[45]),
-                        Double.parseDouble(str[46]), Double.parseDouble(str[47]), Double.parseDouble(str[48]), Double.parseDouble(str[49]), Double.parseDouble(str[50]), Double.parseDouble(str[51]),
-                        Double.parseDouble(str[52]), Double.parseDouble(str[53]), Double.parseDouble(str[54]), Double.parseDouble(str[55]), Double.parseDouble(str[56]), Double.parseDouble(str[57]),
-                        Double.parseDouble(str[58]), Double.parseDouble(str[59]), Double.parseDouble(str[60]), Double.parseDouble(str[61]), Double.parseDouble(str[62]), Double.parseDouble(str[63]),
-                        Double.parseDouble(str[64]), Double.parseDouble(str[65]), Double.parseDouble(str[66]), Double.parseDouble(str[67]), Double.parseDouble(str[68]), Double.parseDouble(str[69]),
-                        Double.parseDouble(str[70]), Double.parseDouble(str[71]), Double.parseDouble(str[72]), Double.parseDouble(str[73]), Double.parseDouble(str[74]), Double.parseDouble(str[75]),
-                        Double.parseDouble(str[76]) , Double.parseDouble(str[77])));
+                datos.add(new Dato(str[0], str[1],
+                        str[2], str[3],
+                        str[4], str[5], str[6], str[7], str[8], str[9],
+                        str[10], str[11], str[12], str[13], str[14], str[15],
+                        str[16], str[17], str[18], str[19], str[20], str[21],
+                        str[22], str[23], str[24], str[25], str[26], str[27],
+                        str[28], str[29], str[30], str[31], str[32], str[33],
+                        str[34], str[35], str[36], str[37], str[38], str[39],
+                        str[40], str[41], str[42], str[43], str[44], str[45],
+                        str[46], str[47], str[48], str[49], str[50], str[51],
+                        str[52], str[53], str[54], str[55], str[56], str[57],
+                        str[58], str[59], str[60], str[61], str[62], str[63],
+                        str[64], str[65], str[66], str[67], str[68], str[69],
+                        str[70], str[71], str[72], str[73], str[74], str[75],
+                        str[76] , str[77]));
                 for (String s : str) {
                     System.out.print(s + "\t\t\t  ");
                     writer.print(s + " \t\t\t ");
@@ -122,8 +122,8 @@ public class Lectura {
     public static String seleccionarDataset() {
         long inicio_selec = System.currentTimeMillis();
         Scanner teclado = new Scanner(System.in);
-        String fst = "0_test_balanced_5000";
-        String snd = "0_train_balanced_15000";
+        String fst = "0_test_balanced_5000.csv";
+        String snd = "0_train_balanced_15000.csv";
         System.out.println("Seleccione el dataset que desea usar.");
         System.out.println("1. " + fst);
         System.out.println("2. " + snd);
@@ -159,12 +159,12 @@ public class Lectura {
      * into a matrix for making it easier to process.
      * @throws Exception
      */
-    public static double[][] recolectarDatos() throws Exception {
+    public static String[][] recolectarDatos() throws Exception {
         long inicio_recol = System.currentTimeMillis();
 
         //Metodo para llenar la matriz
         int filas = datos.size();
-        double[][] matriz5 = new double[filas][76];
+        String[][] matriz5 = new String[filas][76];
         for (int i = 0; i < filas ; i++) {
             for (int j = 0; j < 76; j++) {
                 matriz5[i][j] = datos.get(i).getValue(j);
